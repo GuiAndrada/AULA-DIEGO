@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="stylesLOGIN.css">
+</head>
+<body>
+    <div class="logar"> 
+        <h1>Login</h1>
+        <form id="login-form">
+            <input type="text" id="email" placeholder="Email" name="username" required>
+            <input type="password" id="password" placeholder="Senha" name="password" required>
+            <button type="submit" id="btnlogin">Acessar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            if(localStorage.getItem("usuarioLogado")) {
+                alert("Você já está logado como " + localStorage.getItem("usuarioLogado"));
+            }
+        }
+    </script>
+</body>
+</html>

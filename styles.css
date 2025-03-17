@@ -1,0 +1,125 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #ff7b00;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.login-button {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    margin-left: 1500px; 
+}
+
+.login-button:hover {
+    background-color: #45a049; 
+}
+
+.box {
+    background: rgb(248, 158, 85);
+    padding: 20px;
+    width: 20%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    background-color: #ff7300;  
+    color: white;
+    border: none;
+    padding: 100px;
+    width:100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+button:hover {
+    background-image: url('caminho/para/sua/imagem.jpg'); 
+    background-size: cover;  
+    background-position: center;  
+    color: white;  
+}
+
+button:hover {
+    background-image: url('imagem\ mecanica.avif'); 
+    background-size: cover;  
+    background-position: center;  
+    color: white;  
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 1024px) and (min-width: 601px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .box {
+        width: 45%;
+    }
+}
