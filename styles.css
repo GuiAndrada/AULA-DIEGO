@@ -1,125 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-image: url('imagem mecanica.avif');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
 
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
+/* Cabeçalho */
 header {
-    background: #ff7b00;
+    background-color: #ff6600;
     color: white;
     padding: 20px;
+    font-size: 72px;
+    font-family: 'Bebas Neue', cursive;
     text-align: center;
-    font-size: 24px;
-}
-
-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    max-width: 1200px;
-    width: 100%;
+    position: relative;
 }
 
 .login-button {
-    background-color: #4CAF50; 
-    color: white; 
-    padding: 10px 20px; 
-    text-decoration: none; 
-    border-radius: 5px; 
-    font-size: 16px; 
-    margin-left: 1500px; 
-}
-
-.login-button:hover {
-    background-color: #45a049; 
-}
-
-.box {
-    background: rgb(248, 158, 85);
-    padding: 20px;
-    width: 20%;
-    border-radius: 5px;
-    text-align: center;
-}
-
-button {
-    background-color: #ff7300;  
+    background-color: #28a745;
     color: white;
-    border: none;
-    padding: 100px;
-    width:100%;
-    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: bold;
-    text-align: center;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+.login-button:hover {
+    background-color: #218838;
 }
 
-
-button:hover {
-    background-image: url('caminho/para/sua/imagem.jpg'); 
-    background-size: cover;  
-    background-position: center;  
-    color: white;  
+/* Conteúdo central */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-button:hover {
-    background-image: url('imagem\ mecanica.avif'); 
-    background-size: cover;  
-    background-position: center;  
-    color: white;  
+.button-container {
+    display: flex;
+    gap: 100px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-footer {
-    background: #222;
+.button-container {
+    display: flex;
+    gap: 100px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-container button {
+    padding: 50px 100px;
+    font-size: 28px;
+    border: none;
+    border-radius: 12px;
+    background-color: #ff8800;
     color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    min-width: 320px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    height: 100px; /* mesmo tamanho vertical para os dois */
+}
+
+/* Descrição da loja */
+.descricao {
+    max-width: 900px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.descricao h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.descricao p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.imagens-descricao {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.imagens-descricao img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Rodapé */
+footer {
     text-align: center;
     padding: 15px;
+    background-color: #ff6600;
+    color: white;
+    font-weight: bold;
 }
 
-
+/* Responsivo */
 @media (max-width: 600px) {
-    header {
-        font-size: 18px;
-        padding: 15px;
-    }
-
-    .container {
+    .button-container {
         flex-direction: column;
-        align-items: center;
+        gap: 30px;
     }
 
-    .box {
-        width: 90%;
+    header {
+        font-size: 48px;
+    }
+
+    .login-button {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .descricao h2 {
+        font-size: 28px;
     }
 }
 
-
-@media (max-width: 1024px) and (min-width: 601px) {
-    .container {
-        flex-wrap: wrap;
-    }
-
-    .box {
-        width: 45%;
-    }
-}
