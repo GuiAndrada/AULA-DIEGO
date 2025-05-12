@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Agendamento - Podium Autocenter</title>
+  <link rel="stylesheet" href="stylesAGENDAMENTO.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Agende seu atendimento</h1>
+
+    <form class="form-agendamento">
+      <label for="data">Escolha a data:</label>
+      <input type="date" id="data" name="data" required>
+
+      <label for="hora">Escolha o horário:</label>
+      <input type="time" id="hora" name="hora" required>
+
+      <label for="servico">Tipo de serviço:</label>
+      <select id="servico" name="servico" required>
+        <option value="">Selecione...</option>
+        <option value="alinhamento">Alinhamento</option>
+        <option value="balanceamento">Balanceamento</option>
+        <option value="troca_oleo">Troca de Óleo</option>
+        <option value="pneus">Troca de Pneus</option>
+      </select>
+
+      <button type="submit" class="btn-laranja">Agendar</button>
+    </form>
+  </div>
+</body>
+</html>

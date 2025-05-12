@@ -58,34 +58,28 @@ main {
 
 .button-container {
     display: flex;
-    gap: 100px;
+    gap: 40px;
     margin: 40px 0;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.button-container {
-    display: flex;
-    gap: 100px;
-    margin: 40px 0;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.button-container button {
-    padding: 50px 100px;
-    font-size: 28px;
+.button-container a, .button-container button {
+    padding: 20px 40px;
+    font-size: 24px;
     border: none;
     border-radius: 12px;
-    background-color: #ff8800;
+    background-color: #ff6600;
     color: white;
     cursor: pointer;
-    transition: 0.5s;
-    min-width: 320px;
+    transition: 0.3s;
+    min-width: 200px;
+    text-align: center;
     font-weight: bold;
-    position: relative;
-    overflow: hidden;
-    height: 100px; /* mesmo tamanho vertical para os dois */
+}
+
+.button-container a:hover, .button-container button:hover {
+    background-color: #e65c00;
 }
 
 /* Descrição da loja */
@@ -153,4 +147,3 @@ footer {
         font-size: 28px;
     }
 }
-
